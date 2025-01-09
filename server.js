@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const morgan = require('morgan');
 const connectDB = require('./config/db');
-const recipeRoutes = require('recipeRoutes');
+const recipeRoutes = require('./routes/recipeRoutes');
 
 require('dotenv').config();
 
@@ -16,7 +16,7 @@ app.use(morgan('dev'));
 
 app.use('/api/recipes', recipeRoutes);
 
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
