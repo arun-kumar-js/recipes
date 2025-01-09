@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const morgan = require('morgan');
 const connectDB = require('./config/db');
-const recipeRoutes = require('./routes/recipeRoutes');
+const recipeRoutes = require('./routes/recipeRoutes');  // Relative path to the file
 
 require('dotenv').config();
 
